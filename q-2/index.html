@@ -1,13 +1,53 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
+    <title>q - 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+   <div class="d-flex justify-content-center align-items-center w-100 vh-100"> 
+    <h1 class="text-center">Your Selected Month <span id="month"></span> is <span id="msg"></span>
+    </h1>
+   </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script>
+        let month = 8;
+
+        let monthPrint = document.getElementById("month").innerHTML = month;
+
+        let msg = document.getElementById("msg");
+        switch (month) {
+            case 11:
+            case 12:
+            case 1:
+            case 2:
+                msg.innerHTML = ("Winter...")
+                break;
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+                msg.innerHTML = ("Summer...")
+                break;
+            case 7:
+            case 8:
+            case 9:
+            case 10:
+                msg.innerHTML = ("Monsoon...")
+                break;
+            default:
+                msg.innerHTML = ("Invalid Month...")
+                break;
+        }
+    </script>
+</body>
+
 </html>
