@@ -9,23 +9,20 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-    <h1 id="simple"></h1>
+    <div class="d-flex justify-content-center align-items-center w-100 vh-100">
+        <h1 id="simple" class="sim"></h1>
+    </div>
 
     <script>
-        //nested if
-    // I = PRN/100)Principal Amount (P)
-    // Interest Rate (R)
-    // No. of Years (N)
-    // (if 3>N<=5 then R is 3 | if 5>N<=8 then R is 5 | if 8>N<=12 then R is 12 | else R is 15)
 
     let p = 5000;
     let r = 6;
     let n = 2;
-    let simple = document.getElementById("simple").innerHTML = (p * r * n) / 100;
+    let simple = document.getElementById("simple").innerHTML = ("Simple Interest = " + (p * r * n) / 100);
     
-    
-    if (n>3 && n<=5 > n>5 && n<8) {
-        if (n>3 && n<=5 > n>8 && n<12) {
+
+    if (n>3 && n<=5 || n>5 && n<8) {
+        if (n>3 && n<=5 || n>8 && n<12) {
             r = 3;
         }
         else {
@@ -33,7 +30,7 @@
         }
     }
     else{
-        if (n>5 && n<=8 > n>8 && n<12) {
+        if (n>5 && n<=8 || n>8 && n<12) {
             r = 5;
         }
         else {
