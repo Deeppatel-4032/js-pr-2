@@ -18,9 +18,7 @@
     let p = 5000;
     let r = 6;
     let n = 2;
-    let simple = document.getElementById("simple").innerHTML = ("Simple Interest = " + (p * r * n) / 100);
     
-
     if (n>3 && n<=5 || n>5 && n<8) {
         if (n>3 && n<=5 || n>8 && n<12) {
             r = 3;
@@ -38,6 +36,7 @@
         }
         
     }
+    let simple = document.getElementById("simple").innerHTML = ("Simple Interest = " + (p * r * n) / 100);
 
     </script>
 </body>
