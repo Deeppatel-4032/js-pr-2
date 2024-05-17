@@ -10,8 +10,11 @@
 </head>
 <body>
     <div class="d-flex justify-content-center align-items-center w-100 vh-100">
-        <div style="width: 500px; height: 500px; background-color: black; ">
-         <h1 id="simple" class="sim "></h1>
+        <div style="width: 500px; background-color: black;" class="p-5">
+            <h2 id="pAmt" class="rate text-white "></h2>
+            <h2 id="rate" class="rate text-white "></h2>
+            <h2 id="no" class="rate text-white "></h2>
+            <h2 id="simple" class="sim text-white "></h2>
         </div>
     </div>
 
@@ -38,6 +41,9 @@
         }
         
     }
+    let pAmt = document.getElementById("pAmt").innerHTML = ("Principal Amount = " + p);
+    let no = document.getElementById("no").innerHTML = ("No. of Years = " + n);
+    let rate = document.getElementById("rate").innerHTML = ("Rate of Interest = " + r + "%");
     let simple = document.getElementById("simple").innerHTML = ("Simple Interest = " + (p * r * n) / 100);
 
     </script>
